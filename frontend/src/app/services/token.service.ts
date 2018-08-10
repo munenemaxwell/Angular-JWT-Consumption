@@ -18,5 +18,9 @@ export class TokenService {
 
   deleteToken(){
 
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+
+
   }
 }
