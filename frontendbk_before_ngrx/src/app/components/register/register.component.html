@@ -1,0 +1,35 @@
+<div class="login-form">
+  <form #registerform=ngForm (ngSubmit)="onsubmit()" >
+      <h2 class="text-center">Sign Up</h2>   
+      
+      <div class="alert alert-danger" [hidden]='!error'>
+            {{error}}
+      </div>
+
+      <div class="form-group">
+            <input type="text" name ='name' class="form-control" placeholder="Names" required="required" [(ngModel)]='form.name'>
+        </div>
+
+      <div class="form-group">
+          <input type="text" name ='email' class="form-control" placeholder="Email" required="required" [(ngModel)]='form.email'>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name ='mobile_number' class="form-control" placeholder="phone number" required="required" [(ngModel)]='form.mobile_number'>
+      </div>
+
+      <div class="form-group">
+          <input type="password" name="password" class="form-control" placeholder="Password" required="required" [(ngModel)]='form.password'>
+      </div>
+
+      <div class="form-group">
+        <input type="password" name ='password_confirmation' class="form-control" placeholder="Confirm password" required="required" [(ngModel)]='form.password_confirmation'>
+      </div>
+
+      <div class="form-group" >
+          <button type="submit" [disabled]='!registerform.valid' class="btn btn-primary btn-block">Register</button>
+      </div>
+             
+  </form>
+  <p class="text-center"><a [routerLink]="['']">Back to Login</a></p>
+</div>
