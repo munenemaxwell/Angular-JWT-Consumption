@@ -23,4 +23,8 @@ export class TokenService {
 
 
   }
+  getToken():string{
+
+    return localStorage.getItem('access_token');
+  }
 }

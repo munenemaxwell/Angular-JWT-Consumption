@@ -1,0 +1,38 @@
+
+<div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+      Available products
+    </div>
+   
+    <!-- Product #1 -->
+    <div class="item" *ngFor="let product of products">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="item-1.png" alt="" />
+      </div>
+   
+      <div class="description">
+        <span>{{product.name}}</span>
+        <span>{{product.description}}</span>
+       
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+          <img src="plus.svg" alt="" />
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+          <img src="minus.svg" alt="" />
+        </button>
+      </div>
+   
+      <div class="total-price">$ {{product.price}}</div>
+    </div>
+  
+  </div>
